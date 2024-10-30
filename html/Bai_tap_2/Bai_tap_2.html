@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+        }
+        .wrapper {
+            width: 960px;
+            background-color: antiquewhite;
+        }
+        header{
+            background-color: #294e79;
+            position: relative;
+        }
+        header h1{
+            position: absolute;
+            top: 10px;
+            left: 100px;
+            color: white;
+        }
+        header h5{
+            position: absolute;
+            top: 47px;
+            left: 100px;
+            color: white;
+        }
+        header #frm1{
+            top: 10px;
+            right: 20px;
+            position: absolute;
+        }
+        nav{
+            position: absolute;
+            bottom: 3px;
+            right: 20px;
+        }
+        .menu li{
+            background-color: #3d73b1;
+            display: inline-table;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .menu li a{
+            color: white;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+        .menu li:hover{
+            background-color: thistle;
+        }
+        .menu li:hover>a {
+            font-style: italic;
+            color:hotpink;
+        }
+        .content{
+            height: 450px;
+            width: 960px;
+            background-color: ivory;
+        }
+        .left, .right {
+            width: 48%;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer{
+            background-color: #294e79;
+            position: relative;
+            height: 80px;
+            width: 100%;
+        }
+        footer p{
+            position: absolute;
+            left: 100px;
+            top:30px;
+            color: #ffffff;
+            font-size: larger;
+        }
+        section{
+            width: 65%;
+            height: 100%;
+            float: left;
+            background-color: aliceblue;
+        }
+        aside{
+            width: 35%;
+            height: 100%;
+            float: left;
+            background-color: rgb(239, 236, 232);
+        }
+        .dashed-line {
+            border-top: 1px dashed black; /* Đường nét đứt */
+            margin: 20px 0; /* Khoảng cách trên và dưới */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        .btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="flower.png" alt="" srcset="" width="80" height="100">
+            <h1>FlowerBox 360</h1>
+            <h5>...to get your daily close of luxury roses!</h5>
+            <form action="" method="post" id="frm1">
+                <input type="text" name="" id="" placeholder="Nhap vao">
+                <button type="submit" style="border-radius: 50%;">GO</button>
+            </form>
+            <nav>
+               <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Promotion</a></li>
+                <li><a href="#">Gift Baskets</a></li>
+                <li><a href="#">Flowers Services</a></li>
+                <li><a href="#">About</a></li>
+               </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <section>
+                <h3>
+                    Why Not Contact Us Today
+                </h3>
+                <div class="dashed-line"> </div>
+            <div> 
+                
+                </div>
+            </section>
+        
+            <aside>
+                <h3> Discounts & Special </h3>
+                
+                <picture>
+                    <img src="rose.png" width="100%"
+                </picture> 
+                <div class="dashed-line"></div>
+                <p>FlowerBox 360 offers many great discounts throught the year, 
+                    from coupons and coupon codes, to promo codes and other savings. We also offer military flower discounts to our wonderfull troppps!
+                    
+                 </p>
+                 <p align="right"> <a href="https://www.w3schools.com"> Read more >> </a>.</p>
+
+                 
+            </aside>
+        </div>
+        <footer>
+            <p> Coppyright @2024 Truong IUH </p>
+        </footer>
+    </div>
+</body>
+</html>

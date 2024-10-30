@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-g">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Trang chủ </title> 
+ <link rel="stylesheet" href="../css/bootstrap.min.css">
+ <script src="../js/jquery-3.7.1.min.js"></script>
+ <script src="../js/bootstrap.min.js"></script>
+ <style>
+ .Maudo {
+    font-size: 100%; 
+    color: red;
+}
+
+[class*="col-"] {
+padding-right: 0; padding-left: 0;
+}
+.li {
+    width: 150px;
+}
+
+</style> 
+<script>
+$(document).ready(function() {
+var 1 = 2;
+$("#btnDK").click(function) {
+    $("#myModal").modal();
+});
+
+function kiemtrama) {
+var maukT = /[0-9]{9)$/;
+if (maukT.test($("#txtMa").val()) =="") {
+$("#tbMa").html("Bắt buộc nhập");
+$("#tbMa").addclass("mauDo");
+} else {
+    $("#tbMa") .html("Nhập sai");
+    $("#tbMa") •addclass ("mauDo" );
+}
+
+$("#txtMa").blur (kiemTraMa);
+function kiemTraHt() {
+    var kt = /(^[A-Z]{1}[a-z]+)(\s[A-Z]{1}[a-z]*)+$/;
+    if ($("#txtHT").val() == ") {
+    $("#tbTen").html ("Nhập sai");
+    $("#tbTen") .addclass("mauDo") ;
+    return false;
+    }
+
+if (!kt.test($("#txtHT").val())) {
+S("#tbTen").html("*Chữ cái đầu của mỗi từ phải viết hoa !!");
+$("#tbTen").addClass("mauDo"); 
+ return false;
+}
+
+$("#tbTen").html("*");
+return true;
+};
+$("#txtHT").blur (kiemTraHt);
+
+function kiemTraDc()) {
+var maukT1 = /^[a-z0-9-_]{3,15}$/;
+var maukT = /(abc)$/; //so khóp user name var maukT = /(abc)$/; // so khớp với abc và thứ tự các kí tự trong chuỗi
+if ($("#txtDC").val() == "") {
+S("#tbDC") .html("Bắt buộc nhập");
+S("#tbDC") .addClass ("mauDo");
+return false;
+}
+if (!maukT.test($("#txtDC").val())) {
+$("#tbDC").html("Nhập sai");
+S("#tbDC") .addClass("mauDo");
+return false;
+} 
+$("#tbDC").html("*");
+return true;
+}
+$("#txtDC") .blur (kiemTraDC);
+// Lấy giá trị của section
+$("#slGia") .change(function() {
+$("#slGia option:selected") .each(function() {
+alert($(this).val());
+// Gán giá trị cho Textbox txtGiaDv
+S("#txtDV"). val($(this).val());
+});
+});
+});
+$("-chkDoDung").click(function) {
+var tienDD = 0;
+var n = $(".chkDoDung:checked").length;
+if (n == 0) {
+$(" .chkDoDung:unchecked").each(function() {
+tienDD = 0;
+$("#txtoD").val(tienDD);
+});
+}
+if (n > 0) {
+$(" .chkDoDung:checked" ).each(function() {
+tienDD += parseFloat($(this).val));
+$("#txtDD").val(tienDD);
+});
+}
+var tong = parseFloat($("#txtDD").val()) + parseFloat($("#txtDV").val());
+$("#txtTong").val(tong);
+});
+$("#btnsave"),click(function() {
+var ma = $("#txtMa").val();
+var ht = $("#txtHT").val();
+var dc = $("#txtDC").val();
+var tdv = $("#txtDV").val();
+var tdd = $("#txtDD").val();
+var tong = $("#txtTong").val();
+var them = "<tr><td>" + (i++) + "</td><td>" + ma + "</td><td>" + ht + "</td><td>" + de + "</td><td>" + 
+tdv + "</td><td>" + tdd + "</tds<td>" + tong + "</td></tr>";
+$("#tbDanhSach") .append (them);
+$("#myModal").modal("hide");
+return true;
+});
+});
+</script>
+<head>
+<body>
+<div class="container border"></div>
+<div class="row"
+<div class="co1-12"></div>
+<img src="../img/BOi.PNG alt='width="10%">
+</div>
+<di class="row"></di
+<nav class="navbar"></nav>
+<ul class="nav nav-navbar nav-expand">
+<li class="nav-item"></li>«a href="«" class="nav-link".Trang chủ</a></1i>
+<li class="nav-item"></li><a href="*" class="nav-link" id="btnDK"></a>Đăng ký</a>/li>
+<li class="nav-item"><a href="#" class="nav-link"> Trợ giúp</a>/1i>
+</ul>
+</ nav>
+</div>
+<div class="row">
+<table class="table-bordered table-light table-primary table-hover table table-striped" id="tbDanhsach">
+<thead>
+<th>stT</th>
+</th>Mã học viên</th>
+<th>Tên</th>
+<th>Email</th>
+<th>Tiền dịch vụ </th> 
+<th> Tiền đồ dùng</th>
+<th> Tổng tiền </th>
+
+                <td>1</td>
+                <td>123456789</td>
+                <td>Tân Thị My Thu</td>
+                <td>tannh@iuh.edu.vn</td>
+                <td>100000</td>
+                <td>100000</td>
+                <td>200000</td>
+            </table>
+</div>
+<div class="row">
+<div class="modal fade" id="myModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5> THÔNG TIN THANH TOÁN</h5>
+<button type="button" class="close" data-dismiss="modal"></button>&times;</button>
+</div>
+<div class="modal-body">
+<form class="form-control">
+<div class="row form-group p-1">
+<div class="row form-group p-1">
+<div class="col-3 col-sm-3">
+<label for="*>Mã học viên:</label>
+</div>
+<div class="co1-3 col-sm-6">
+<input type="text" class="form-control" placeholder="123456789" id="txtMa">
+</div>
+<div class="col-3 Col-sm-3 p-2" >
+<span id="tbMa">*</ span>
+</01V)
+< div class="row form-group p-1">
+<div class="co1-3 col-sm-3">
+<label for="">Ho tên:</label>
+</div>
+<div class="col-6 col-sm-6">
+<input type="text" id="txtHT" class="form-control" placeholder="Tran Thu Trang">
+</div>
+<div class="co1-3 col-sm-3 p-2">
+<Span 10= LDIe </span>
+</div›
+ulv classe row torm-croup o-1>
+«div class="Co1-6 col-sm-3"›
+«div class="co1-6 col-sm-6">
+«input type="text" class="form-control" placeholder="trangtran@iuh.edu.vn" id="txtDC">
+‹/div›
+saav class="col-3 Col-sm-3 p-2>
+«span id="tbEmail">*</span›
+</alv>
+‹/ div›
+«div class="row form-group p-1"›
+«div class="Co1-4 col-sm-3"›
+‹label for="">dich vu:</label›
+</div>
+«select name="gia" class="form-control" id="slGia"›
+‹option value="zeee",Bơi</option›
+«option value="3008">Trượt ván‹/option›
+«option value="508"›Moto nuớc‹/option›
+«option value="508e"›Moto nước</option>
+‹/select›
+</ChW
+‹div class="row form-group p-1"> «div class="co1-4 col-sm-3"›
+‹label for=""›Giá tiền:</label›
+</O1VY
+«div class="col-8 col-sm-6"› ‹input type="text" name="txtDV" id="txtDV" class="form-control" disabled›
+‹/div› ‹/div›
+‹div class="row D-1":
+‹label for=""›Đò dùng:‹/label›
+‹/div›
+«div class="col-8 col-sm-6">
+‹input type="checkbox" name="chkDoDung" class="chkDoDung" value="20000" /> Áo quần bơi
+</div›
+‹div class="row p-1"› «div class="col-4 col-sm-3"› ‹label for=""›</label›
+C/OV)
+«div class="col-s col-sm-6"›
+«input type="checkbox" name="chkDoDung" class="chkDoDung" value="50009" /> Phao
+CrO1VX
+</CLV>
+calv classs row p-l
+«div class="co1-4 col-sm-3"› ‹label for=""›</label›
+CraLVX
+d Shau ye heksor nane Choooung" classe"CHoooung" value 70000" /> Kinh bot
+‹/div>
+</div›
+‹div class="row p-1"› ‹div class="col-4 col-sm-3">
+‹label for="">Tiên đồ dùng:‹/label>
+‹/div›
+«div class="col-8 col-sm-6"›
+«input type="text" name="txtDD" id="txtDD" class="form-control" value="@" disabled›
+‹/div›
+‹/div›
+</a1vx <br>
+«div class="row p-1"› «div class="co1-4 col-sm-3">
+«Labes tor= ›Tong tien:</Labe_»
+</div>
+d Shout yole et nane txtfone" Ide"Extfong" Classe" form-contro1" disabed)
+</div>
+</div> ‹br›
+colv class= row p-1)
+av classel.st6dhput typeresteauettssenth-danger ben-603/5s tr.tox/d
+s/uswa
+‹torm>
+</div>
+«div class="modal-footer"›
+(n4>Tran: chann coan‹/142
+</div>
+</azv>
+</a1v>|
+</div> «div class="row"›
+<h6> Mã sinh viên:_
+</div>
+(Đ1V C1aH8 CO1 A CO1-nd-4°9 /h6)
+<h6>Họ tên: _
+‹/div>
+(oi do pre ia co n.e) /h6)
+‹/div> ‹/div›
+</a1V>
+</body> </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
